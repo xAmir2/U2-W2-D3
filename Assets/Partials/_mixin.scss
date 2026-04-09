@@ -76,11 +76,6 @@ ul {
     @include bg_hero;
 }
 
-@mixin btn_primary {
-    
-}
-
-
 @mixin text-light {
     color: $text-light;
 }

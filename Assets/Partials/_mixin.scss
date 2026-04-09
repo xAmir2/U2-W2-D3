@@ -1,0 +1,118 @@
+@mixin big-title {
+ font-size: 4em;
+}
+
+h1 {
+    
+    @include big-title;
+}
+
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin clean-ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    justify-content: right;
+}
+
+nav {
+    @include between;
+}
+
+ul {
+    @include clean-ul;
+}
+.flex-center {
+    @include centered;
+}
+
+.flex-between {
+    @include between;
+}
+
+@mixin gutter($row, $col: $row) {
+  gap: $row $col;
+}
+
+.cont {
+  @include gutter(10px, 20px);
+}
+
+@mixin relative {
+    position: relative;
+}
+
+@mixin absolute {
+    position: absolute;
+    bottom: -100px;
+    right: 0px;
+}
+
+.rel {
+    @include relative;
+}
+
+.abs {
+    @include absolute;
+}
+
+@mixin bg_hero {
+ background-color: $bg_hero;
+}
+
+.bg_hero {
+    @include bg_hero;
+}
+
+@mixin btn_primary {
+    
+}
+
+
+@mixin text-light {
+    color: $text-light;
+}
+
+.text-light {
+    @include text-light;
+}
+
+@mixin text-light-subtle {
+    color: $text-light-subtle;
+}
+
+.text-light-subtle {
+    @include text-light-subtle;
+}
+
+@mixin floating {
+    border: 1px solid #eb60eb;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.floating {
+    @include floating;
+}
+
+@mixin floating-2 {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.floating-2 {
+    @include floating-2;
+}

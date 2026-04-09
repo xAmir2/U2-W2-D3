@@ -1,0 +1,32 @@
+@mixin btn_primary {
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: $primary;
+}
+
+@mixin btn_secondary {
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: $secondary;
+}
+
+@mixin btn_tertiary {
+border-radius: 15px;
+border: none;
+color: white;
+background-color: $tertiary;
+}
+
+.btn-1 {
+    @include btn_primary;
+}
+
+.btn-2 {
+    @include btn_secondary;
+}
+
+.btn-3 {
+    @include btn_tertiary;
+}

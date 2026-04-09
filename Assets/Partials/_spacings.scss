@@ -1,0 +1,58 @@
+$sizes-map: (
+  sm: 0.5em,
+  nrm: 1em,
+  md: 1.2em,
+  lg: 1.5em,
+  xl: 2em,
+  xxl: 2.5em,
+);
+
+@each $name, $value in $sizes-map {
+  .p-#{$name} {
+    padding: $value;
+  }
+}
+
+@each $name, $value in $sizes-map {
+  .px-#{$name} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .py-#{$name} {
+    padding-bottom: $value;
+    padding-top: $value;
+  }
+}
+
+@each $name, $value in $sizes-map {
+  .m-#{$name} {
+    margin: $value;
+  }
+}
+
+@each $name, $value in $sizes-map {
+  .my-#{$name} {
+    margin-bottom: $value;
+    margin-top: $value;
+  }
+}
+@each $name, $value in $sizes-map {
+  .mx-#{$name} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+}
+$width-map: (
+    fth: 25%,
+    half: 50%,
+    tfth: 75%,
+    full: 100%,
+);
+
+@each $name, $value in $width-map {
+    .w-#{$name} {
+        width: $value;
+    }
+}
